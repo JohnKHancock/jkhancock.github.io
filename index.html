@@ -1,0 +1,67 @@
+<head><title><b>Module 5: Question 1</b></title></head>
+
+<script type="text/javascript">
+
+document.write('<p><b>Word Reverse</b></p>');
+
+</script>
+
+
+<script type="text/javascript">
+
+document.write('<p>Please enter a word:</p><br>')
+
+// Basic functions
+
+function reverseIt(){
+	var inputString = document.getElementById("inputTextString").value;
+    var splitString = inputString.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+	str = "The reverse of the text that you entered: " + joinArray;
+    document.getElementById("output").innerHTML = str;
+}
+
+function multiples(){
+	var inputNum = document.getElementById("inputNumString").value;
+	str="<table><tr>"
+
+	for (i=1; i<=20; i++)
+	{
+		if (i%4==0)
+		{
+			str = "</tr>"+ str + "<td>" + inputNum*i.toString() + "</td>"+ "<tr>"
+		}else{
+			str =  str + "<td>" + inputNum*i.toString() + "</td>"
+			}
+	}
+
+	str + "</tr></table>"
+
+    document.getElementById("output2").innerHTML = str;
+}
+
+
+</script>
+
+
+<body>
+
+	<h2>Question 1, Part One</h2>
+
+		<input id="inputTextString" placeholder="Enter a word", size="40">
+		<br>
+		<button onclick="reverseIt()" id=btn1>Reverse Word(s)</button>
+		<p id="output"></p>
+
+	<h2>Question 1, Part Two</h2>
+
+		<input id="inputNumString" placeholder="Enter a number", size="10">
+		<br>
+		<button onclick="multiples()" id=btn1>Input Number</button>
+		<p id="output2"></p>
+
+
+
+</body>
+</html>
