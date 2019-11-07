@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <meta charset='utf-8'>
-<html >
 <head>
 		<meta charset="utf-8">
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js" charset="utf-8"></script>
 		<title>DATA608 Fall 2019 Module 5</title>
         <style>
             table {
@@ -12,53 +10,33 @@
                 font: 12px sans-serif;
             }
 
+            th {
+                border: 1px black solid;
+                padding: 5px;
+            }
+
             td {
                 border: 1px black solid;
                 padding: 5px;
             }
         </style>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js" charset="utf-8"></script>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+  				$("#search").on("keyup", function() {
+    			var value = $(this).val().toLowerCase();
+    			$("#presidents tr").filter(function() {
+     				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+		</script>
+	
 </head>
 
-
-
-<script type="text/javascript">
-
-// Basic functions
-
-function reverseIt(){
-	var inputString = document.getElementById("inputTextString").value;
-    var splitString = inputString.split("");
-    var reverseArray = splitString.reverse();
-    var joinArray = reverseArray.join("");
-	str = "The reverse of the text that you entered: " + joinArray;
-    document.getElementById("output").innerHTML = str;
-}
-
-function multiples(){
-	var inputNum = document.getElementById("inputNumString").value;
-	str="<table><tr>"
-
-	for (i=1; i<=20; i++)
-	{
-		if (i%4==0)
-		{
-			str = "</tr>"+ str + "<td>" + inputNum*i.toString() + "</td>"+ "<tr>"
-		}else{
-			str =  str + "<td>" + inputNum*i.toString() + "</td>"
-			}
-	}
-
-	str + "</tr></table>"
-
-    document.getElementById("output2").innerHTML = str;
-}
-
-
-</script>
-
-
 <body>
-
+	<script type='text/javascript' src="./script.js"></script>
 	<h2>Question 1, Part One</h2>
 	<h3>Please Enter a Word or Phrase:</h3>
 
@@ -74,8 +52,14 @@ function multiples(){
 		<button onclick="multiples()" id=btn1>Input Number</button>
 		<p id="output2"></p>
 
-	<h2>Question 2, Part One</h2>
-		<script type='text/javascript' src='script.js'></script>
+	<h2>Question 2</h2>
+	<h3>Table of Presidents' Heights and Weights</h3>
+	<br/>
+	<input type="text" id="search" placeholder="Search the Presidents Table" size=70></input>
+	<br/>
+	<div id="output3"></div>
+	
+	
 
 </body>
 </html>
