@@ -37,28 +37,52 @@
 
 <body>
 	<script type='text/javascript' src="./script.js"></script>
-	<h2>Question 1, Part One</h2>
-	<h3>Please Enter a Word or Phrase:</h3>
-
-		<input id="inputTextString" placeholder="Enter a word", size="40">
+	<div align="center">
+		<h1>DATA 608 Fall 2019: Module 5</h1>
+		<h2>John K. Hancock</h2>
+		<h3>John.Hancock06@spsmail.cuny.edu</h3>
 		<br>
-		<button onclick="reverseIt()" id=btn1>Reverse Word(s)</button>
-		<p id="output"></p>
+	</div>
 
-	<h2>Question 1, Part Two</h2>
+	<div id="Question One" align="center">
+		<h2>Question 1, Part One</h2>
+		<h3>Please Enter a Word or Phrase:</h3>
 
-		<input id="inputNumString" placeholder="Enter a number", size="10">
+			<input id="inputTextString" placeholder="Enter a word", size="40">
+			<br>
+			<button onclick="reverseIt()" id=btn1>Reverse Word(s)</button>
+			<p id="output"></p>
+			<br>
+
+		<h2>Question 1, Part Two</h2>
+
+			<input id="inputNumString" placeholder="Enter a number", size="10">
+			<br>
+			<button onclick="multiples()" id=btn1>Input Number</button>
+			<p id="output2"></p>
+			<br>
+	</div>
+
+
+	<div id="Question Two" align="center">
+		<h2>Question 2</h2>
+		<h3>Table of Presidents' Heights and Weights</h3>
+		<h4>To filter the table enter a name, height, or weight:</h4>
+		<br/>
+		<input type="text" id="search" placeholder="Search the Presidents Table" size=70></input>
+		<br/>
+		<div id="output3"></div>
 		<br>
-		<button onclick="multiples()" id=btn1>Input Number</button>
-		<p id="output2"></p>
+	</div>
 
-	<h2>Question 2</h2>
-	<h3>Table of Presidents' Heights and Weights</h3>
-	<br/>
-	<input type="text" id="search" placeholder="Search the Presidents Table" size=70></input>
-	<br/>
-	<div id="output3"></div>
-	
+	<div id="References" align="center">
+		<U>References</U><br>
+		Javascript: https://www.w3schools.com/js/default.asp<br>
+		Niclas Darville block: http://bl.ocks.org/ndarville/7075823<br>
+		jquery: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_filters_table
+
+
+	</div>
 	
 
 </body>
